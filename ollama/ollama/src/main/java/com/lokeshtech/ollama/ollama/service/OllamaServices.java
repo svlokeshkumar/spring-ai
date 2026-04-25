@@ -1,0 +1,18 @@
+package com.lokeshtech.ollama.ollama.service;
+
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.stereotype.Service;
+
+@Service
+public class OllamaServices {
+
+    public OllamaServices(ChatClient.Builder chatClientBuilder) {
+        this.chatClient = chatClientBuilder.build();
+    }
+
+    private final ChatClient chatClient;
+
+    public String chatWithOpenAILLM(String message){
+        return  chatClient.prompt(message).call().content();
+    }
+}

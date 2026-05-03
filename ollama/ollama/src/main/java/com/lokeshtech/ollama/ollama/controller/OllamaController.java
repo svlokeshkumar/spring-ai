@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("ollama/api")
 public class OllamaController {
-    private final OllamaServices ollamaServices;
+    /*private final OllamaServices ollamaServices;
 
     public OllamaController(OllamaServices ollamaServices) {
         this.ollamaServices = ollamaServices;
@@ -17,5 +17,5 @@ public class OllamaController {
     @GetMapping("/chat")
     public String chat(String message){
         return ollamaServices.chatWithOpenAILLM(message);
-    }
+    }*/
 }

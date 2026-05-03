@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class OllamaServices {
-
+/*
     public OllamaServices(ChatClient.Builder chatClientBuilder) {
         this.chatClient = chatClientBuilder.build();
     }
@@ -14,5 +14,5 @@ public class OllamaServices {
 
     public String chatWithOpenAILLM(String message){
         return  chatClient.prompt(message).call().content();
-    }
+    }*/
 }

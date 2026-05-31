@@ -40,4 +40,10 @@ public class MessageRolesDemoServices {
                 .system("Your are an IT Helpdesk assistant. So you can answer about Leave policy , Assert Details . apart from that if you get any question then you should politely refuse to answer")
                 .user("Policy details: Policy : PREMIUM Max Coverage : 100000 Claim Amount : 150000 Customer says:%s " ).call().chatResponse();
     }
+
+    public String guideme(String topic,String level,int points){
+        return chatClient.prompt().system("Your are tech stack assistant ."+
+                        "give best answer to the students and make sure your answer will be to the point"
+                ).user("Explan me"+topic +"in" + level + "with" + points + "Points").call().content();
+    }
 }
